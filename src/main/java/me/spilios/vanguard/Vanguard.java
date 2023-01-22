@@ -8,7 +8,6 @@ import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.minecraft.text.Text;
 import static net.minecraft.server.command.CommandManager.*;
 
-
 public class Vanguard implements ModInitializer {
     public static final String MOD_ID = "Vanguard";
     @Override
