@@ -12,7 +12,7 @@ public class Vanguard implements ModInitializer {
     public static final String MOD_ID = "Vanguard";
     @Override
     public void onInitialize() {
-        // Register custom commands
+
         CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> dispatcher.register(literal("foo")
                 .executes(context -> {
                     // For versions below 1.19, replace "Text.literal" with "new LiteralText".

@@ -2,9 +2,7 @@ package me.spilios.vanguard.settings;
 
 public class Setting {
     public String name;
-    public int min;
-    public int max;
-    public int defaultVal;
+    public int min, max, defaultVal;
     public boolean enabled;
     public Setting(String name, int defaultVal, int min, int max, boolean enabled){
         this.name = name;
