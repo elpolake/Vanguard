@@ -1,5 +1,7 @@
 package me.spilios.vanguard.module;
 
+import me.spilios.vanguard.module.modules.movement.*;
+
 import java.util.ArrayList;
 
 public class ModuleManager {
@@ -9,6 +11,8 @@ public class ModuleManager {
         //COMBAT
 
         //MOVEMENT
+        modules.add(new Sprint());
+        modules.add(new Flight());
 
         //RENDER
 

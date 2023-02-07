@@ -10,23 +10,15 @@ import static net.minecraft.server.command.CommandManager.*;
 
 public class Vanguard implements ModInitializer {
     public static final String MOD_ID = "Vanguard";
+    public static final Vanguard INSTANCE = new Vanguard();
     @Override
     public void onInitialize() {
 
-        CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> dispatcher.register(literal("foo")
-                .executes(context -> {
-                    // For versions below 1.19, replace "Text.literal" with "new LiteralText".
-                    context.getSource().sendMessage(Text.literal("Called /foo with no arguments"));
+    }
+    public void onKeyPress(int key, int action){
 
-                    return 1;
-                })));
+    }
+    public void onTick(){
 
-        ServerTickEvents.END_WORLD_TICK.register(world -> {
-            // Do something on server tick
-        });
-
-        ClientTickEvents.END_CLIENT_TICK.register(client -> {
-            // Do something on client tick
-        });
     }
 }
