@@ -1,17 +1,31 @@
 package me.spilios.vanguard.module;
 
+import net.minecraft.client.MinecraftClient;
+
 public class Module {
     public String description;
     public String name;
     public Category category;
-    //public int key;
-    public boolean enabled;
-    public Module(String name, Category category){
+    public int key;
+    public boolean enabled = false;
+    protected MinecraftClient mc = MinecraftClient.getInstance();
+    public Module(String name, Category category, int key){
         this.name = name;
         this.category = category;
-        //this.key = key;
+        this.key = key;
+    }
+    public void toggle(){
+        this.enabled = !this.enabled;
+        if(enabled){
+            onEnable();
+        }else{
+            onDisable();
+        }
     }
     public void onEnable(){
-        enabled = !enabled;
+    }
+    public void onDisable(){
+    }
+    public void onTick(){
     }
 }
