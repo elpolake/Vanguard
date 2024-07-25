@@ -8,9 +8,14 @@ public class Sprint extends Module {
     public Sprint(){
         super("Sprint", Category.MOVEMENT, GLFW.GLFW_KEY_T);
     }
-
-    public void onEnable(){
-
+    @Override
+    public void onTick(){
+        mc.player.setSprinting(true);
+    }
+    @Override
+    public void onDisable(){
+        mc.player.setSprinting(false);
+        super.onDisable();
     }
 
 }
