@@ -1,5 +1,8 @@
 package me.rex.module;
 
+import me.rex.module.modules.client.ClickGUI;
+import me.rex.module.modules.combat.AutoCrystal;
+import me.rex.module.modules.misc.TestingPlayer;
 import me.rex.module.modules.movement.*;
 import java.util.ArrayList;
 
@@ -8,6 +11,7 @@ public class ModuleManager {
     public ArrayList<Module> modules = new ArrayList<Module>();
     public ModuleManager(){
         //COMBAT
+        modules.add(new AutoCrystal());
 
         //MOVEMENT
         modules.add(new Sprint());
@@ -18,8 +22,10 @@ public class ModuleManager {
         //PLAYER
 
         //MISC
+        modules.add(new TestingPlayer());
 
         //CLIENT
+        modules.add(new ClickGUI());
 
     }
 
