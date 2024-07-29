@@ -9,6 +9,7 @@
 	],
 	"icon": "assets/vanguard/icon.png",
 	"environment": "*",
+	"accessWidener": "vanguard.accesswidener",
 	"entrypoints": {
 		"main": [
 			"me.rex.Vanguard"

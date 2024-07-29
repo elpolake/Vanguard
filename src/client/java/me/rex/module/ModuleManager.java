@@ -2,6 +2,7 @@ package me.rex.module;
 
 import me.rex.module.modules.client.ClickGUI;
 import me.rex.module.modules.combat.AutoCrystal;
+import me.rex.module.modules.misc.FastPlace;
 import me.rex.module.modules.misc.TestingPlayer;
 import me.rex.module.modules.movement.*;
 import java.util.ArrayList;
@@ -17,6 +18,9 @@ public class ModuleManager {
         //MOVEMENT
         modules.add(new Sprint());
         modules.add(new Flight());
+        modules.add(new Velocity());
+        modules.add(new Step());
+        modules.add(new ReverseStep());
 
         //RENDER
 
@@ -24,6 +28,7 @@ public class ModuleManager {
 
         //MISC
         modules.add(new TestingPlayer());
+        modules.add(new FastPlace());
 
         //CLIENT
         modules.add(new ClickGUI());

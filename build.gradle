@@ -20,7 +20,7 @@ repositories {
 
 loom {
 	splitEnvironmentSourceSets()
-
+	accessWidenerPath = file("src/client/resources/vanguard.accesswidener")
 	mods {
 		"vanguard" {
 			sourceSet sourceSets.main
