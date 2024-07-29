@@ -22,10 +22,10 @@ public class ClickGUIScreen extends Screen {
     }
     @Override
     public void render(DrawContext context, int mouseX, int mouseY, float delta) {
+        super.render(context, mouseX, mouseY, delta);
         for(Frame frame : frames){
             frame.render(context, mouseX, mouseY, delta);
         }
-        super.render(context, mouseX, mouseY, delta);
     }
     @Override
     public boolean mouseClicked(double mouseX, double mouseY, int button) {
@@ -34,9 +34,13 @@ public class ClickGUIScreen extends Screen {
         }
         return super.mouseClicked(mouseX, mouseY, button);
     }
-
     @Override
     public boolean shouldPause() {
         return false;
+    }
+
+    @Override
+    protected void init() {
+        super.init();
     }
 }

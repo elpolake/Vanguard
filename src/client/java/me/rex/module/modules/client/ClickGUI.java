@@ -11,6 +11,11 @@ public class ClickGUI extends Module {
     }
     @Override
     public void onEnable(){
-        mc.setScreen(ClickGUIScreen.INSTANCE);
+        mc.setScreenAndRender(ClickGUIScreen.INSTANCE);
+    }
+
+    @Override
+    public void onDisable() {
+        mc.setScreen(null);
     }
 }

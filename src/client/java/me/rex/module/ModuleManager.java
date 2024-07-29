@@ -5,6 +5,7 @@ import me.rex.module.modules.combat.AutoCrystal;
 import me.rex.module.modules.misc.TestingPlayer;
 import me.rex.module.modules.movement.*;
 import java.util.ArrayList;
+import java.util.List;
 
 public class ModuleManager {
     public static final ModuleManager INSTANCE = new ModuleManager();
@@ -41,5 +42,14 @@ public class ModuleManager {
             }
         }
         return enabled;
+    }
+    public List<Module> getModulesInCategory(Category category){
+        List<Module> categoryModules = new ArrayList<>();
+        for(Module module : modules){
+            if(module.category == category){
+                categoryModules.add(module);
+            }
+        }
+        return categoryModules;
     }
 }
