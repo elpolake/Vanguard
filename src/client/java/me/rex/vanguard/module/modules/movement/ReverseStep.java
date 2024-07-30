@@ -6,7 +6,7 @@ import org.lwjgl.glfw.GLFW;
 
 public class ReverseStep extends Module {
     public ReverseStep(){
-        super("ReverseStep", Category.MOVEMENT, GLFW.GLFW_KEY_O);
+        super("ReverseStep", Category.MOVEMENT, GLFW.GLFW_KEY_O, false);
     }
     @Override
     public void onTick(){

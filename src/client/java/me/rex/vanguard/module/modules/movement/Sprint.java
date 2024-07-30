@@ -6,7 +6,7 @@ import org.lwjgl.glfw.GLFW;
 
 public class Sprint extends Module {
     public Sprint(){
-        super("Sprint", Category.MOVEMENT, GLFW.GLFW_KEY_T);
+        super("Sprint", Category.MOVEMENT, GLFW.GLFW_KEY_T, false);
     }
     @Override
     public void onTick(){

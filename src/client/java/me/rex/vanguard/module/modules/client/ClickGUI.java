@@ -7,7 +7,7 @@ import org.lwjgl.glfw.GLFW;
 
 public class ClickGUI extends Module {
     public ClickGUI(){
-        super("ClickGUI", Category.CLIENT, GLFW.GLFW_KEY_RIGHT_SHIFT);
+        super("ClickGUI", Category.CLIENT, GLFW.GLFW_KEY_RIGHT_SHIFT, false);
     }
     @Override
     public void onEnable(){

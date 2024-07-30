@@ -6,7 +6,7 @@ import org.lwjgl.glfw.GLFW;
 
 public class Flight extends Module {
     public Flight() {
-        super("Flight", Category.MOVEMENT, GLFW.GLFW_KEY_R);
+        super("Flight", Category.MOVEMENT, GLFW.GLFW_KEY_R, false);
     }
     @Override
     public void onTick(){

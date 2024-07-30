@@ -10,7 +10,7 @@ import com.google.common.eventbus.Subscribe;
 
 public class Velocity extends Module {
     public Velocity() {
-        super("Velocity", Category.MOVEMENT, GLFW.GLFW_KEY_V);
+        super("Velocity", Category.MOVEMENT, GLFW.GLFW_KEY_V, true);
     }
     @Subscribe
     private void onPacketReceive(PacketEvent.Receive event) {
