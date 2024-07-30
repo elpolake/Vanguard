@@ -1,5 +1,6 @@
 package me.rex.vanguard.gui;
 
+import me.rex.vanguard.gui.setting.Component;
 import me.rex.vanguard.module.Category;
 import me.rex.vanguard.module.Module;
 import me.rex.vanguard.module.ModuleManager;
@@ -39,6 +40,21 @@ public class Frame {
     public void mouseClicked(double mouseX, double mouseY, int button) {
         for (ModuleButton moduleButton : buttons){
             moduleButton.mouseClicked(mouseX, mouseY, button);
+        }
+    }
+
+    public void updateButtons() {
+        int offset = height;
+        for(ModuleButton button : buttons){
+            button.offset = offset;
+            offset += height;
+            if(button.extended){
+                for(Component component : button.components){
+                    if (component.setting.visible){
+                        offset += height;
+                    }
+                }
+            }
         }
     }
 }

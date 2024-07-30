@@ -1,6 +1,12 @@
 package me.rex.vanguard.module;
 
+import me.rex.vanguard.settings.Setting;
 import net.minecraft.client.MinecraftClient;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import static me.rex.vanguard.utils.EventUtil.EVENT_BUS;
 
 public class Module {
@@ -10,6 +16,7 @@ public class Module {
     public int key;
     public boolean enabled = false;
     public boolean hasListener;
+    public List<Setting> settings = new ArrayList<>();
     protected MinecraftClient mc = MinecraftClient.getInstance();
     public Module(String name, Category category, int key, boolean hasListener){
         this.name = name;
@@ -36,5 +43,8 @@ public class Module {
         }
     }
     public void onTick(){
+    }
+    public void addSettings(Setting... settings){
+        this.settings.addAll(Arrays.asList(settings));
     }
 }
