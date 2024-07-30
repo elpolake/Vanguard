@@ -11,12 +11,18 @@ import org.lwjgl.glfw.GLFW;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class VanguardClient implements ClientModInitializer{
+public class VanguardClient implements ClientModInitializer, ModInitializer{
 	public static final String MOD_ID = "Vanguard";
 	public static final VanguardClient INSTANCE = new VanguardClient();
 	public static final Logger logger = LoggerFactory.getLogger("vanguard");
 	public MinecraftClient mc = MinecraftClient.getInstance();
 	public static EventManager eventManager = new EventManager();
+
+	@Override
+	public void onInitialize() {
+
+	}
+
 	@Override
 	public void onInitializeClient() {
 		logger.info("Vanguard initialized");

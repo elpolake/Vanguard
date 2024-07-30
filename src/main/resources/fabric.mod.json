@@ -3,27 +3,20 @@
 	"id": "vanguard",
 	"version": "${version}",
 	"name": "Vanguard",
-	"description": "General Purpose Hacked Client",
+	"description": "General Purpose Minecraft Hacked Client",
 	"authors": [
 		"rexmortem"
 	],
+	"license": "CC0-1.0",
 	"icon": "assets/vanguard/icon.png",
 	"environment": "*",
-	"accessWidener": "vanguard.accesswidener",
 	"entrypoints": {
 		"main": [
-			"me.rex.Vanguard"
-		],
-		"client": [
 			"me.rex.vanguard.VanguardClient"
 		]
 	},
 	"mixins": [
-		"vanguard.mixins.json",
-		{
-			"config": "vanguard.client.mixins.json",
-			"environment": "client"
-		}
+		"vanguard.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.15.11",

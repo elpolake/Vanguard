@@ -1,8 +1,11 @@
 {
 	"required": true,
-	"package": "me.rex.mixin",
+	"package": "me.rex.vanguard.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
+		"KeyboardMixin",
+		"MixinClientConnection",
+		"MinecraftClientMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
