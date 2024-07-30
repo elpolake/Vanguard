@@ -2,6 +2,7 @@ package me.rex.vanguard.module;
 
 import me.rex.vanguard.module.modules.client.ClickGUI;
 import me.rex.vanguard.module.modules.combat.AutoCrystal;
+import me.rex.vanguard.module.modules.combat.KillAura;
 import me.rex.vanguard.module.modules.misc.FastPlace;
 import me.rex.vanguard.module.modules.misc.TestingPlayer;
 import me.rex.vanguard.module.modules.movement.*;
@@ -15,6 +16,7 @@ public class ModuleManager {
     public ModuleManager(){
         //COMBAT
         modules.add(new AutoCrystal());
+        modules.add(new KillAura());
 
         //MOVEMENT
         modules.add(new Sprint());
