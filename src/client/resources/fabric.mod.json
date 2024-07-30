@@ -15,7 +15,7 @@
 			"me.rex.Vanguard"
 		],
 		"client": [
-			"me.rex.VanguardClient"
+			"me.rex.vanguard.VanguardClient"
 		]
 	},
 	"mixins": [
