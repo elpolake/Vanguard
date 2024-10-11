@@ -51,7 +51,9 @@ public class Frame {
             if(button.extended){
                 for(Component component : button.components){
                     if (component.setting.visible){
+                        component.offset = offset;
                         offset += height;
+                        //component.render();
                     }
                 }
             }

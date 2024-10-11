@@ -20,7 +20,9 @@ public class Component {
     }
 
     public void render(DrawContext context, int mouseX, int mouseY, float delta){
-
+        VanguardClient.logger.info("Rendered Component");
+        context.drawTextWithShadow(VanguardClient.INSTANCE.mc.textRenderer, setting.name, parent.parent.x + 2, parent.parent.y + offset + 2, -1);
+        context.fill(parent.parent.x, parent.parent.y + offset, parent.parent.x + parent.parent.width, parent.parent.y + offset + parent.parent.height, Color.GRAY.getRGB());
     }
 
     public void mouseClicked(double mouseX, double mouseY, int button) {

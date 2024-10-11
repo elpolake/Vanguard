@@ -11,12 +11,12 @@ public class Flight extends Module {
     public BoolSetting bypass = new BoolSetting("Anti Kick", false);
     public Flight() {
         super("Flight", Category.MOVEMENT, GLFW.GLFW_KEY_R, false);
-        addSettings(speed);
+        addSettings(speed, bypass);
     }
     @Override
     public void onTick(){
         mc.player.getAbilities().flying = true;
-        mc.player.getAbilities().setFlySpeed(speed.getValueFloat());
+        //mc.player.getAbilities().setFlySpeed(speed.getValueFloat());
         super.onTick();
     }
 
