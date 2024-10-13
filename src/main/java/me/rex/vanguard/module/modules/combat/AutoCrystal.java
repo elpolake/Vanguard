@@ -14,6 +14,7 @@ public class AutoCrystal extends Module {
     public static EnumSetting renderType = new EnumSetting("Render Mode", renderMode.BOTH, renderMode.FILL, renderMode.OUTLINE, renderMode.BOTH);
     public AutoCrystal(){
         super("AutoCrystal", Category.COMBAT, GLFW.GLFW_KEY_C, false);
+        addSettings(placeDistance, silentSwitch, renderType);
     }
     public enum renderMode{
         FILL,

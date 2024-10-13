@@ -52,7 +52,7 @@ public class Frame {
                 for(Component component : button.components){
                     if (component.setting.visible){
                         component.offset = offset;
-                        offset += height;
+                        offset += component.parent.parent.height;
                         //component.render();
                     }
                 }
