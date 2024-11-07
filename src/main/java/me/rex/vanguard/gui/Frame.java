@@ -40,6 +40,11 @@ public class Frame {
     public void mouseClicked(double mouseX, double mouseY, int button) {
         for (ModuleButton moduleButton : buttons){
             moduleButton.mouseClicked(mouseX, mouseY, button);
+            for(Component component : moduleButton.components){
+                if(component.isHovered(mouseX, mouseY)){
+                    component.mouseClicked(mouseX, mouseY, button);
+                }
+            }
         }
     }
 

@@ -25,7 +25,6 @@ public class BoolBox extends Component{
         }
     }
 
-    @Override
     public void mouseClicked(double mouseX, double mouseY, int button) {
         super.mouseClicked(mouseX, mouseY, button);
         boolSetting.toggle();
