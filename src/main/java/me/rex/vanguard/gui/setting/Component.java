@@ -23,6 +23,9 @@ public class Component {
         VanguardClient.logger.info("Rendered Component");
         context.drawTextWithShadow(VanguardClient.INSTANCE.mc.textRenderer, setting.name, parent.parent.x + 2, parent.parent.y + offset + 2, -1);
         context.fill(parent.parent.x, parent.parent.y + offset, parent.parent.x + parent.parent.width, parent.parent.y + offset + parent.parent.height, Color.GRAY.getRGB());
+        if(isHovered(mouseX, mouseY)){
+            context.fill(parent.parent.x, parent.parent.y + offset, parent.parent.x + parent.parent.width, parent.parent.y + offset + parent.parent.height, new Color(0, 0, 0, 160).getRGB());
+        }
     }
 
     public void mouseClicked(double mouseX, double mouseY, int button) {
@@ -30,7 +33,6 @@ public class Component {
     }
 
     public boolean isHovered(double mouseX, double mouseY) {
-        return mouseX > parent.parent.x && mouseX < parent.parent.x + parent.parent.width &&
-                mouseY > parent.parent.y + parent.offset + offset && mouseY < parent.parent.y + parent.offset + offset + parent.parent.height;
+        return mouseX >= parent.parent.x && mouseX <= parent.parent.x + parent.parent.width && mouseY >= parent.parent.y + offset && mouseY <= parent.parent.y + offset + parent.parent.height;
     }
 }
