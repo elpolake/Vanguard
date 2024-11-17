@@ -29,6 +29,7 @@ public class VanguardClient implements ClientModInitializer, ModInitializer{
 		eventManager.init();
 	}
 	public void onKeyPress(int key, int action){
+		if(mc.player == null) return;
 		if(action == GLFW.GLFW_PRESS) {
 			for(Module module : ModuleManager.INSTANCE.modules){
 				if(key == module.key){

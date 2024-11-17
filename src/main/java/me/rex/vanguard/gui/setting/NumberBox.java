@@ -12,6 +12,7 @@ import java.math.RoundingMode;
 
 public class NumberBox extends Component{
     private NumberSetting numberSetting;
+
     public NumberBox(Setting setting, ModuleButton parent, int offset) {
         super(setting, parent, offset);
         this.numberSetting = (NumberSetting) setting;
